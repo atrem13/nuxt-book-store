@@ -56,6 +56,9 @@
       >
         <v-icon>mdi-menu</v-icon>
       </v-btn>
+      
+      <v-spacer />
+      <v-btn color="green" @click.stop="openModal">Add Books</v-btn>
     </v-app-bar>
     <v-content>
       <v-container>
@@ -89,6 +92,8 @@
 </template>
 
 <script>
+
+import { eventBus } from "@/eventBus";
 export default {
   data () {
     return {
@@ -111,6 +116,12 @@ export default {
       right: true,
       rightDrawer: false,
       title: 'Vuetify.js'
+    }
+  },
+  
+  methods: {
+    openModal() {
+      eventBus.$emit("open-add-book-modal");
     }
   }
 }
