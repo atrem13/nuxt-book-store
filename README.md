@@ -1,4 +1,5 @@
 # bookStore
+Nyoba buat aplikasi crud sederhana dengan nuxt
 
 ## Build Setup
 
